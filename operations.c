@@ -5,13 +5,20 @@ int insert(Playlist* playlist)
     return 0;
 }
 
-int remove(Playlist* playlist)
+int removeMusic(Playlist* playlist)
 {
     return 0;
 }
 
-void list(Playlist* playlist)
+void list(Playlist* playlist, int size)
 {
+    PlaylistNode* node = playlist->list;
+    int index = 0;
+    while(index < size) {
+        printf("%s | %s \n", node->music.name, node->music.artist);
+        node = node->next;
+        index++;
+    }
     return;
 }
 

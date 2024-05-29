@@ -8,8 +8,8 @@
 #include "utils.h"
 
 int insert(Playlist*);
-int remove(Playlist*);
-void list(Playlist*);
+int removeMusic(Playlist*);
+void list(Playlist*, int);
 void listByMusic(Playlist*);
 
 #endif

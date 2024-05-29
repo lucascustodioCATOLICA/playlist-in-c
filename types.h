@@ -3,17 +3,17 @@
 
 struct Music {
     char artist[64];
-    char music[64];
+    char name[64];
 } typedef Music;
 
 struct PlaylistNode {
     Music music;
-    PlaylistNode* next;
-    PlaylistNode* back;
+    struct PlaylistNode* next;
+    struct PlaylistNode* prev;
 } typedef PlaylistNode;
 
 struct Playlist {
-    PlaylistNode list;
+    PlaylistNode* list;
     int size;
 } typedef Playlist;
 

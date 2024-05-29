@@ -7,7 +7,7 @@
 #include "types.h"
 #include "utils.h"
 
-int readFile(Playlist*);
+void readFile(Playlist*);
 void writeFile(Playlist*, int);
 
 #endif
