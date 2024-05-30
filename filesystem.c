@@ -40,5 +40,18 @@ void readFile (Playlist* playlist)
 
 void writeFile (Playlist* playlist)
 {
+    FILE* file = fopen("musicas.txt", "w");
+    if (file == NULL) {
+        printf("Arquivo nao pode ser aberto\n");
+        return;
+    }
 
+    PlaylistNode* node = playlist->list;
+    for(int i=0; i<playlist->size; i++) {
+        fprintf(file, "%s;%s\n", node->music.artist, node->music.name);
+        node = node->next;
+    }
+
+    fclose(file);
+    return;
 }
