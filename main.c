@@ -21,7 +21,7 @@ int main()
 
     int input;
     do {
-        //system("cls");
+        system("cls");
         printMainMenu(playingMusic);
         printf("   COMMAND: ");
         scanf("%d", &input);
@@ -41,7 +41,7 @@ int main()
                 listByMusic(playlist);
                 break;
             case 5:
-                search(playlist);
+                playingMusic = search(playlist, playingMusic);
                 break;
             case 6:
                 insert(playlist);
@@ -51,8 +51,6 @@ int main()
                 break;
         }
     } while(input != 0);
-
-    // list(playlist);
     
     return 0;
 }

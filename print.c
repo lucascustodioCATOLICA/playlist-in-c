@@ -3,7 +3,7 @@
 void printMainMenu(PlaylistNode* playingMusic)
 {
     printf("\n\n                                 Listening Music:\n");
-    printf(RED);
+    printf(GRN);
     printf("                                 %s\n", playingMusic->music.name);
     printf("                                 %s\n\n", playingMusic->music.artist);
     printf(WHT);
@@ -30,4 +30,13 @@ void printMainMenu(PlaylistNode* playingMusic)
     printf("   |_______________|_________________________________________|_______________|\n\n");
 
     printf("   ===========================================================================\n");
+}
+
+void printHeader(char header[])
+{
+    printf("   ===========================================================================\n");
+    printf(BLU);
+    printf("   %s\n", header);
+    printf(WHT);
+    printf("   ===========================================================================\n\n");
 }

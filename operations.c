@@ -12,14 +12,25 @@ void removeMusic(Playlist* playlist)
 
 void list(Playlist* playlist)
 {
+    system("cls");
+    printHeader("List All Musics");
+
     int size = playlist->size;
     PlaylistNode* node = playlist->list;
     int index = 0;
     while(index < size) {
-        printf("%s | %s \n", node->music.name, node->music.artist);
+        printf("   %s ", node->music.name);
+        printf(GRN);
+        printf("of ");
+        printf(WHT);
+        printf("%s \n", node->music.artist);
+
         node = node->next;
         index++;
     }
+
+    printf("\n");
+    system("pause");
     return;
 }
 

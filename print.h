@@ -7,5 +7,6 @@
 #include "colors.h"
 
 void printMainMenu(PlaylistNode*);
+void printHeader(char[]);
 
 #endif

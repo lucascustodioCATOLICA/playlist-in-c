@@ -6,6 +6,8 @@
 
 #include "types.h"
 #include "utils.h"
+#include "colors.h"
+#include "print.h"
 
 void insert(Playlist*);
 void removeMusic(Playlist*);
