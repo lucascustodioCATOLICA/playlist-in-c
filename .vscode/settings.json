@@ -3,6 +3,7 @@
     "controls.h": "c",
     "filesystem.h": "c",
     "string.h": "c",
-    "sort.h": "c"
+    "sort.h": "c",
+    "stdio.h": "c"
   }
 }

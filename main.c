@@ -14,13 +14,14 @@ int main()
 {
     setlocale(LC_ALL, "C.UTF-8");
     Playlist* playlist = (Playlist*) malloc(sizeof(Playlist));
-    PlaylistNode *playingMusic = (PlaylistNode*) malloc(sizeof(PlaylistNode));
     readFile(playlist);
+
+    PlaylistNode *playingMusic = (PlaylistNode*) malloc(sizeof(PlaylistNode));
     playingMusic = playlist->list;
 
     int input;
     do {
-        system("cls");
+        //system("cls");
         printMainMenu(playingMusic);
         printf("   COMMAND: ");
         scanf("%d", &input);
@@ -28,10 +29,10 @@ int main()
         switch (input)
         {
             case 1:
-                back(playingMusic);
+                playingMusic = back(playingMusic);
                 break;
             case 2:
-                next(playingMusic);
+                playingMusic = next(playingMusic);
                 break;
             case 3:
                 list(playlist);
@@ -51,7 +52,7 @@ int main()
         }
     } while(input != 0);
 
-    // list(playlist, playlist->size);
+    // list(playlist);
     
     return 0;
 }

@@ -2,8 +2,9 @@
 #define CONTROLS
 
 #include "types.h"
+#include "stdio.h"
 
-void next(PlaylistNode*);
-void back(PlaylistNode*);
+PlaylistNode* next(PlaylistNode*);
+PlaylistNode* back(PlaylistNode*);
 
 #endif
