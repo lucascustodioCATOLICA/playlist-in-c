@@ -7,6 +7,6 @@
 
 #include "types.h"
 
-void sort(Playlist*, int size);
+void sort(Playlist*);
 
 #endif

@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void sort(Playlist* playlist, int size)
+void sort(Playlist* playlist)
 {   
     return;
 }

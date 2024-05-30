@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-void next();
-void back();
+void next(PlaylistNode*);
+void back(PlaylistNode*);
 
 #endif

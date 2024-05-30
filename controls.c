@@ -1,11 +1,13 @@
 #include "controls.h"
 
-void next()
+void next(PlaylistNode* playingMusic)
 {
+    playingMusic = playingMusic->next;
     return;
 }
 
-void back()
+void back(PlaylistNode* playingMusic)
 {
+    playingMusic = playingMusic->prev;
     return;
 }

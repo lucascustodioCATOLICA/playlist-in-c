@@ -17,6 +17,4 @@ struct Playlist {
     int size;
 } typedef Playlist;
 
-PlaylistNode *PlayingMusic;
-
 #endif
