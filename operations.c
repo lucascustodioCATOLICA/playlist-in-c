@@ -60,5 +60,29 @@ void list(Playlist* playlist)
 
 void listByMusic(Playlist* playlist)
 {
+    system("cls");
+
+    printf(RED);
+    printf("muito complicado");
+    printf("\n\n\n");
+    printf("                  _.-^^---....,,--\n");
+    printf("              _--                  --_\n");
+    printf("             <                        >)\n");
+    printf("             |                         |\n");
+    printf("              \\._                   _./\n");
+    printf("                 ```--. . , ; .--'''\n");
+    printf("                       | |   |\n");
+    printf("                    .-=||  | |=-.\n");
+    printf("                    `-=#$%&%$#=-'\n");
+    printf("                       | ;  :|\n");
+    printf("              _____.,-#%&$@%#&#~,._____\n");
+    printf("            /##%$@&%#@&#%&@&#%&@&#%&@@####\\\n");
+    printf("           /&@#%&@#&%@#&%&&@#%&%@#&%@##&@#%&\\\n");
+    printf("          /@#&%&@#%&@##@#&%@#&%&&@#%&%@#%&@#&\\\n");
+    printf("\n\n\n");
+
+    system("pause");
+    printf(WHT);
+
     return;
 }
