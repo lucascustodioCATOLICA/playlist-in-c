@@ -8,8 +8,9 @@
 #include "utils.h"
 #include "colors.h"
 #include "print.h"
+#include "filesystem.h"
 
-void insert(Playlist*);
+Playlist* insert(Playlist*);
 void removeMusic(Playlist*);
 void list(Playlist*);
 void listByMusic(Playlist*);

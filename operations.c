@@ -1,8 +1,32 @@
 #include "operations.h"
 
-void insert(Playlist* playlist)
+Playlist* insert(Playlist* playlist)
 {
-    return;
+    system("cls");
+    printHeader("Insert New Music");
+
+    Music new;
+
+    printf("      Music: ");
+    fflush (stdin);
+    fgets (new.name, sizeof(new.name), stdin);
+    removeNewlineCh(new.name);
+    printf("      Author: ");
+    fflush (stdin);
+    fgets (new.artist, sizeof(new.artist), stdin);
+    removeNewlineCh(new.artist);
+
+    PlaylistNode *node = (PlaylistNode*) malloc(sizeof(PlaylistNode));
+    node->music = new;
+    node->next = playlist->list;
+    node->prev = playlist->list->prev;
+    playlist->list->prev->next = node;
+    playlist->list->prev = node;
+    playlist->size++;
+
+    writeFile(playlist);
+
+    return playlist;
 }
 
 void removeMusic(Playlist* playlist)

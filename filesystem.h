@@ -8,6 +8,6 @@
 #include "utils.h"
 
 void readFile(Playlist*);
-void writeFile(Playlist*, int);
+void writeFile(Playlist*);
 
 #endif

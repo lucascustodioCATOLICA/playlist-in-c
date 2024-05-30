@@ -44,7 +44,7 @@ int main()
                 playingMusic = search(playlist, playingMusic);
                 break;
             case 6:
-                insert(playlist);
+                playlist = insert(playlist);
                 break;
             case 7:
                 removeMusic(playlist);

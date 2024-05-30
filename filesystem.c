@@ -38,7 +38,7 @@ void readFile (Playlist* playlist)
     fclose(file);
 }
 
-void writeFile (Playlist* playlist, int size)
+void writeFile (Playlist* playlist)
 {
 
 }
