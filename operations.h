@@ -11,7 +11,7 @@
 #include "filesystem.h"
 
 Playlist* insert(Playlist*);
-void removeMusic(Playlist*);
+Playlist* removeMusic(Playlist*);
 void list(Playlist*);
 void listByMusic(Playlist*);
 

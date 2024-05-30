@@ -29,9 +29,36 @@ Playlist* insert(Playlist* playlist)
     return playlist;
 }
 
-void removeMusic(Playlist* playlist)
+Playlist* removeMusic(Playlist* playlist)
 {
-    return;
+    system("cls");
+    printHeader("Remove Music");
+
+    char musicToRemove[64];
+    printf("      Music: ");
+    fflush (stdin);
+    fgets (musicToRemove, sizeof(musicToRemove), stdin);
+    removeNewlineCh(musicToRemove);
+
+    int size = playlist->size;
+    PlaylistNode* node = playlist->list;
+    int index = 0;
+    while(index < size) {
+        if(strcmp(node->music.name, musicToRemove) == 0)
+        {
+            node->prev->next = node->next;
+            node->next->prev = node->prev;   
+            playlist->size--;
+            free(node);
+
+            writeFile(playlist);
+            return playlist;
+        }
+        node = node->next;
+        index++;
+    }
+
+    return playlist;
 }
 
 void list(Playlist* playlist)

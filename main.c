@@ -47,7 +47,7 @@ int main()
                 playlist = insert(playlist);
                 break;
             case 7:
-                removeMusic(playlist);
+                playlist = removeMusic(playlist);
                 break;
         }
     } while(input != 0);

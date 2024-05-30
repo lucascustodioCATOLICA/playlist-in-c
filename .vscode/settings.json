@@ -8,6 +8,7 @@
     "operations.h": "c",
     "colors.h": "c",
     "search.h": "c",
-    "types.h": "c"
+    "types.h": "c",
+    "utils.h": "c"
   }
 }
