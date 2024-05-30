@@ -2,6 +2,7 @@
   "files.associations": {
     "controls.h": "c",
     "filesystem.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "sort.h": "c"
   }
 }

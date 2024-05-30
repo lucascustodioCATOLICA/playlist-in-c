@@ -1,17 +1,18 @@
 #include "operations.h"
 
-int insert(Playlist* playlist)
+void insert(Playlist* playlist)
 {
-    return 0;
+    return;
 }
 
-int removeMusic(Playlist* playlist)
+void removeMusic(Playlist* playlist)
 {
-    return 0;
+    return;
 }
 
-void list(Playlist* playlist, int size)
+void list(Playlist* playlist)
 {
+    int size = playlist->size;
     PlaylistNode* node = playlist->list;
     int index = 0;
     while(index < size) {

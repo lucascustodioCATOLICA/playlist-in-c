@@ -5,20 +5,53 @@
 #include "types.h"
 #include "filesystem.h"
 #include "operations.h"
+#include "search.h"
+#include "controls.h"
 #include "sort.h"
+#include "print.h"
 
 int main()
 {
     setlocale(LC_ALL, "C.UTF-8");
     Playlist* playlist = (Playlist*) malloc(sizeof(Playlist));
-    PlaylistNode *PlayingMusic = (PlaylistNode*) malloc(sizeof(PlaylistNode));
-    PlayingMusic = playlist->list;
-
+    PlaylistNode *playingMusic = (PlaylistNode*) malloc(sizeof(PlaylistNode));
     readFile(playlist);
+    playingMusic = playlist->list;
 
-    sort(playlist);
+    int input;
+    do {
+        system("cls");
+        printMainMenu(playingMusic);
+        printf("   COMMAND: ");
+        scanf("%d", &input);
 
-    list(playlist, playlist->size);
+        switch (input)
+        {
+            case 1:
+                back(playingMusic);
+                break;
+            case 2:
+                next(playingMusic);
+                break;
+            case 3:
+                list(playlist);
+                break;
+            case 4:
+                listByMusic(playlist);
+                break;
+            case 5:
+                search(playlist);
+                break;
+            case 6:
+                insert(playlist);
+                break;
+            case 7:
+                removeMusic(playlist);
+                break;
+        }
+    } while(input != 0);
+
+    // list(playlist, playlist->size);
     
     return 0;
 }

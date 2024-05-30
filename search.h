@@ -5,6 +5,6 @@
 
 #include "types.h"
 
-PlaylistNode search(Playlist*, char*, int, int);
+void search(Playlist*);
 
 #endif

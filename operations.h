@@ -7,9 +7,9 @@
 #include "types.h"
 #include "utils.h"
 
-int insert(Playlist*);
-int removeMusic(Playlist*);
-void list(Playlist*, int);
+void insert(Playlist*);
+void removeMusic(Playlist*);
+void list(Playlist*);
 void listByMusic(Playlist*);
 
 #endif
